@@ -1,0 +1,234 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-display: "Space Grotesk";
+    --font-body: "Plus Jakarta Sans";
+    --font-mono: "JetBrains Mono";
+    --radius: 0.5rem;
+
+    --background: 0.99 0 0;
+    --foreground: 0.1 0.01 265;
+    --card: 0.96 0.02 300;
+    --card-foreground: 0.12 0.01 260;
+    --popover: 0.98 0 0;
+    --popover-foreground: 0.12 0.01 260;
+
+    --primary: 0.55 0.22 258;
+    --primary-foreground: 0.98 0 0;
+
+    --secondary: 0.58 0.24 292;
+    --secondary-foreground: 0.98 0 0;
+    --muted: 0.92 0.01 260;
+    --muted-foreground: 0.45 0.02 260;
+
+    --accent: 0.6 0.22 205;
+    --accent-foreground: 0.98 0 0;
+
+    --destructive: 0.55 0.22 25;
+    --destructive-foreground: 0.98 0 0;
+
+    --border: 0.88 0.02 260;
+    --input: 0.94 0.02 260;
+    --ring: 0.55 0.22 258;
+
+    --chart-1: 0.55 0.22 258;
+    --chart-2: 0.58 0.24 292;
+    --chart-3: 0.6 0.22 205;
+    --chart-4: 0.65 0.18 40;
+    --chart-5: 0.5 0.15 120;
+
+    --sidebar: 0.97 0 0;
+    --sidebar-foreground: 0.12 0.01 260;
+    --sidebar-primary: 0.55 0.22 258;
+    --sidebar-primary-foreground: 0.98 0 0;
+    --sidebar-accent: 0.58 0.24 292;
+    --sidebar-accent-foreground: 0.98 0 0;
+    --sidebar-border: 0.88 0.02 260;
+    --sidebar-ring: 0.55 0.22 258;
+
+    --gradient-blue: linear-gradient(
+      135deg,
+      oklch(0.55 0.22 258),
+      oklch(0.52 0.2 255)
+    );
+    --gradient-purple: linear-gradient(
+      135deg,
+      oklch(0.58 0.24 292),
+      oklch(0.54 0.22 290)
+    );
+    --gradient-cyan: linear-gradient(
+      135deg,
+      oklch(0.6 0.22 205),
+      oklch(0.58 0.2 200)
+    );
+    --gradient-primary: linear-gradient(
+      135deg,
+      oklch(0.55 0.22 258),
+      oklch(0.6 0.22 205)
+    );
+  }
+
+  .dark {
+    --background: 0.1 0.01 265;
+    --foreground: 0.95 0 0;
+    --card: 0.14 0.02 270;
+    --card-foreground: 0.93 0 0;
+    --popover: 0.18 0.01 265;
+    --popover-foreground: 0.93 0 0;
+
+    --primary: 0.65 0.24 258;
+    --primary-foreground: 0.1 0.01 265;
+
+    --secondary: 0.68 0.26 292;
+    --secondary-foreground: 0.1 0.01 265;
+    --muted: 0.25 0.02 270;
+    --muted-foreground: 0.6 0.01 265;
+
+    --accent: 0.7 0.24 205;
+    --accent-foreground: 0.1 0.01 265;
+
+    --destructive: 0.65 0.19 22;
+    --destructive-foreground: 0.1 0.01 265;
+
+    --border: 0.22 0.02 265;
+    --input: 0.18 0.02 265;
+    --ring: 0.65 0.24 258;
+
+    --chart-1: 0.65 0.24 258;
+    --chart-2: 0.68 0.26 292;
+    --chart-3: 0.7 0.24 205;
+    --chart-4: 0.75 0.2 40;
+    --chart-5: 0.6 0.18 120;
+
+    --sidebar: 0.14 0.02 270;
+    --sidebar-foreground: 0.93 0 0;
+    --sidebar-primary: 0.65 0.24 258;
+    --sidebar-primary-foreground: 0.1 0.01 265;
+    --sidebar-accent: 0.68 0.26 292;
+    --sidebar-accent-foreground: 0.1 0.01 265;
+    --sidebar-border: 0.22 0.02 265;
+    --sidebar-ring: 0.65 0.24 258;
+
+    --gradient-blue: linear-gradient(
+      135deg,
+      oklch(0.65 0.24 258),
+      oklch(0.62 0.22 255)
+    );
+    --gradient-purple: linear-gradient(
+      135deg,
+      oklch(0.68 0.26 292),
+      oklch(0.64 0.24 290)
+    );
+    --gradient-cyan: linear-gradient(
+      135deg,
+      oklch(0.7 0.24 205),
+      oklch(0.68 0.22 200)
+    );
+    --gradient-primary: linear-gradient(
+      135deg,
+      oklch(0.65 0.24 258),
+      oklch(0.7 0.24 205)
+    );
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+}
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("/assets/fonts/SpaceGrotesk.woff2") format("woff2");
+  font-weight: 400 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("/assets/fonts/PlusJakartaSans.woff2") format("woff2");
+  font-weight: 400 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/assets/fonts/JetBrainsMono.woff2") format("woff2");
+  font-weight: 400 700;
+  font-display: swap;
+}
+
+@layer utilities {
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .glassmorphism {
+    @apply bg-white/10 dark:bg-white/5 backdrop-blur-md border border-white/20 dark:border-white/10;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent;
+  }
+
+  .card-3d {
+    @apply transition-smooth hover:scale-105 hover:shadow-xl hover:shadow-primary/20;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card-3d:hover {
+    transform: scale(1.04) translateY(-4px);
+    box-shadow: 0 20px 40px rgba(139, 92, 246, 0.3);
+  }
+
+  .shadow-glow {
+    @apply shadow-lg shadow-primary/30 dark:shadow-primary/20;
+  }
+
+  /* Glass utility */
+  .glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  /* Gradient text (explicit CSS for non-Tailwind contexts) */
+  .gradient-text-css {
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6, #06b6d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Glow variants */
+  .glow-blue {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+  }
+
+  .glow-purple {
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+  }
+
+  .glow-cyan {
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.4);
+  }
+
+  /* Glow shadow shorthand variants used in components */
+  .shadow-glow-blue {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+  }
+
+  .shadow-glow-purple {
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+  }
+
+  .shadow-glow-cyan {
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.4);
+  }
+}

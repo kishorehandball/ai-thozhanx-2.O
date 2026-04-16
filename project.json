@@ -1,0 +1,25 @@
+{
+  "overview": "KOLARU AI 2.0 – For Students (UNGAL AI NANBAN) is a comprehensive AI-powered academic platform with 10 modules, an interactive 3D AI Robot companion (AI Nanban), and a full suite of content generators including a Prompt Generator, canvas-based image creation, video scripts, PPT, PDF, documents, and project builder for engineering students.",
+  "features": [
+    "Interactive AI Robot (AI Nanban) with face-touch smile and body-touch dance animations",
+    "Robot state system: idle, smile, thinking, celebration based on user actions",
+    "New Prompt Generator page with templates for image, video, PPT, PDF, abstract, and document prompts",
+    "Canvas-based image generation with prompt-matched colors, gradients, and visual patterns",
+    "10 AI modules: Chat, Image, Video, Website, Document, PPT, PDF, Abstract, Project Builder",
+    "Glassmorphism cards with 3D hover effects",
+    "Deep Blue / Neon Purple / Cyan premium color theme",
+    "Floating AI assistant button with drag support",
+    "Export in correct formats: PNG, MP4, PPTX, PDF, DOCX"
+  ],
+  "category": "productivity",
+  "tags": [
+    "ai",
+    "students",
+    "academic",
+    "robot",
+    "generator",
+    "education",
+    "dashboard"
+  ],
+  "last_updated": "2026-04-15T12:43:19.779Z"
+}

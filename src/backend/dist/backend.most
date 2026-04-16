@@ -1,0 +1,51 @@
+// Version: 1.0.0
+type Data__791452850<K, V> =
+  {var count : Nat__490723111; kvs : [var ?(K, V)]};
+type GenerationType__621107746 =
+  {
+    #Abstract;
+    #Chat;
+    #Document;
+    #Image;
+    #PDF;
+    #PPT;
+    #Project;
+    #Video;
+    #Website
+  };
+type Generation__37331754 =
+  {
+    createdAt : Int;
+    id : Text;
+    prompt : Text;
+    title : Text;
+    type_ : GenerationType__621107746;
+    userId : Principal
+  };
+type Internal__8484328<K, V> =
+  {children : [var ?Node__46230540<K, V>]; data : Data__791452850<K, V>};
+type Leaf__809889148<K, V> = {data : Data__791452850<K, V>};
+type Nat__490723111 = Nat__920180692;
+type Nat__920180692 = Nat;
+type Node__46230540<K, V> =
+  {#internal : Internal__8484328<K, V>; #leaf : Leaf__809889148<K, V>};
+type UserProfile__686917189 =
+  {
+    displayName : Text;
+    joinedAt : Int;
+    principal : Principal;
+    totalGenerations : Nat
+  };
+actor {
+  stable genCounter : {var value : Nat};
+  stable generations :
+    {
+      var root : Node__46230540<Text, Generation__37331754>;
+      var size : Nat__490723111
+    };
+  stable profiles :
+    {
+      var root : Node__46230540<Text, UserProfile__686917189>;
+      var size : Nat__490723111
+    }
+};

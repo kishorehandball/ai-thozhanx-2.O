@@ -1,0 +1,39 @@
+type UserProfile = 
+ record {
+   displayName: text;
+   joinedAt: int;
+   "principal": principal;
+   totalGenerations: nat;
+ };
+type GenerationType = 
+ variant {
+   Abstract;
+   Chat;
+   Document;
+   Image;
+   PDF;
+   PPT;
+   Project;
+   Video;
+   Website;
+ };
+type Generation = 
+ record {
+   createdAt: int;
+   id: text;
+   prompt: text;
+   title: text;
+   "type": GenerationType;
+   userId: principal;
+ };
+service : {
+  deleteGeneration: (userId: principal, genId: text) -> (bool);
+  getActiveUsers: () -> (nat) query;
+  getGenerationHistory: (userId: principal, limit: nat) ->
+   (vec Generation) query;
+  getTotalGenerations: () -> (nat) query;
+  getUserProfile: (userId: principal) -> (opt UserProfile) query;
+  saveGeneration: (userId: principal, genType: GenerationType, prompt: 
+   text, title: text) -> (text);
+  updateUserProfile: ("principal": principal, displayName: text) -> (bool);
+}
